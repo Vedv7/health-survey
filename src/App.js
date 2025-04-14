@@ -56,24 +56,25 @@ function App() {
   const [ratedOutcomes, setRatedOutcomes] = useState([]);
   const [currentOutcome, setCurrentOutcome] = useState("");
 
-  useEffect(() => {
-    if (step === 5) {
-      fetch("https://script.google.com/macros/s/AKfycbx3J9QAWyNrAl3_Re3Kn1hgeQKykGL4813dnKk_j_Vv8nDuyLYcIU4edInez2Bi5tnohg/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          email,
-          selectedOutcomes,
-          ratings,
-          dependencies: outcomeDependencies,
-        }),
-      })
-        .then((res) => res.text())
-        .then((result) => console.log("✅ Sent to Google Sheets:", result))
-        .catch((err) => console.error("❌ Error submitting:", err));
-    }
-  }, [step]);
+useEffect(() => {
+  if (step === 5) {
+    fetch("https://script.google.com/macros/s/AKfycbw39rBYfgyVWaVvpalwpI7GDue9Mm7_UTqQ-FbcIYAB2bhDZAsWx0_5uKZClaf-JAUao/exec", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name,
+        email,
+        selectedOutcomes,
+        ratings,
+        dependencies: outcomeDependencies,
+      }),
+    })
+      .then((res) => res.text())
+      .then((result) => console.log("✅ Sent to Google Sheets:", result))
+      .catch((err) => console.error("❌ Error submitting:", err));
+  }
+}, [step]);
+
 
   const handleRatingChange = (outcome, value) => {
     setRatings((prev) => ({ ...prev, [outcome]: value }));
