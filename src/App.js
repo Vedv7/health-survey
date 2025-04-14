@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-
 const allOutcomes = [
   "Adaptability", "Awareness", "Balance", "Breathing", "Calmness", "Cardiohealth",
   "Clarity", "Confidence", "Connection", "Creativity", "Curiosity", "Digestion",
@@ -139,9 +138,7 @@ function App() {
         {step === 0 && (
           <div className="fade-in">
             <h1>🌿 Welcome to Nature Counter Survey</h1>
-            <p style={{ fontSize: "20px" }}>
-              Hope you had a beautiful time in nature!
-            </p>
+            <p style={{ fontSize: "20px" }}>Hope you had a beautiful time in nature!</p>
             <button className="button" onClick={() => setStep(1)}>Start Survey</button>
           </div>
         )}
@@ -198,90 +195,90 @@ function App() {
           </div>
         )}
 
-       {step === 5 && (
-  <div className="fade-in">
-    <h2>🎉 Thank you for your response, {name}!</h2>
-    <p style={{ fontSize: "18px" }}>Your input has been recorded 🙏</p>
-  </div>
-)}
-</div>
+        {step === 5 && (
+          <div className="fade-in">
+            <h2>🎉 Thank you for your response, {name}!</h2>
+            <p style={{ fontSize: "18px" }}>Your input has been recorded 🙏</p>
+          </div>
+        )}
+      </div>
 
-{/* Styles */}
-<style>{`
-  .container {
-    min-height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
-    background-size: cover;
-    background-position: center;
-    padding: 50px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Segoe UI', sans-serif;
-  }
+      <style>{`
+        .container {
+          min-height: 100vh;
+          background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+          background-size: cover;
+          background-position: center;
+          padding: 50px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: 'Segoe UI', sans-serif;
+        }
 
-  .glass {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    border-radius: 20px;
-    padding: 40px;
-    color: #fff;
-    width: 100%;
-    max-width: 650px;
-    animation: fadeIn 0.5s ease;
-  }
+        .glass {
+          background: rgba(30, 30, 30, 0.7);
+          color: #fff;
+          backdrop-filter: blur(16px);
+          -webkit-backdrop-filter: blur(16px);
+          box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+          border-radius: 20px;
+          padding: 40px;
+          width: 100%;
+          max-width: 650px;
+          animation: fadeIn 0.5s ease;
+        }
 
-  .input {
-    width: 100%;
-    padding: 12px;
-    font-size: 18px;
-    margin: 20px 0;
-    border-radius: 8px;
-    border: none;
-  }
+        .input {
+          width: 100%;
+          padding: 12px;
+          font-size: 18px;
+          margin: 20px 0;
+          border-radius: 8px;
+          border: none;
+        }
 
-  .button {
-    background: linear-gradient(to right, #4caf50, #2196f3);
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s ease;
-  }
+        .button {
+          background: linear-gradient(to right, #4caf50, #2196f3);
+          color: white;
+          border: none;
+          padding: 12px 24px;
+          font-size: 18px;
+          border-radius: 8px;
+          cursor: pointer;
+          margin-top: 20px;
+          transition: background 0.3s ease;
+        }
 
-  .button:hover {
-    background: linear-gradient(to right, #2196f3, #4caf50);
-  }
+        .button:hover {
+          background: linear-gradient(to right, #2196f3, #4caf50);
+        }
 
-  .button.outcome {
-    width: 100%;
-    margin: 10px 0;
-  }
+        .button.outcome {
+          width: 100%;
+          margin: 10px 0;
+        }
 
-  .button.disabled {
-    background: #999 !important;
-    cursor: not-allowed;
-  }
+        .button.disabled {
+          background: #666 !important;
+          cursor: not-allowed;
+        }
 
-  .button.submit {
-    background: linear-gradient(to right, #ff9800, #f44336);
-  }
+        .button.submit {
+          background: linear-gradient(to right, #ff9800, #f44336);
+        }
 
-  .fade-in {
-    animation: fadeIn 0.6s ease;
-  }
+        .fade-in {
+          animation: fadeIn 0.6s ease;
+        }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(15px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-`}</style>
-</div>
-);
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(15px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </div>
+  );
 }
-export default App;
 
+export default App;
