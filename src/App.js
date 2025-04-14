@@ -58,7 +58,7 @@ function App() {
 
 useEffect(() => {
   if (step === 5) {
-    fetch("https://script.google.com/macros/s/AKfycbw39rBYfgyVWaVvpalwpI7GDue9Mm7_UTqQ-FbcIYAB2bhDZAsWx0_5uKZClaf-JAUao/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbx7lKlu4WwYpt3McDi74d36F05UypEnEkI4yVyhupSue9O0n5GIpvtTLCoCUS9fLStfjQ/exec", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
